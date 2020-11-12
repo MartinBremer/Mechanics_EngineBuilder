@@ -242,7 +242,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 160d1e4f1a56e1447bd5889b857baaf7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  seed: martin
+  seed: 'sushi '
   deckSize: 33
 --- !u!4 &813778850
 Transform:
