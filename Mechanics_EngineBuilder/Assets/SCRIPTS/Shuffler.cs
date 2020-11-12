@@ -13,7 +13,6 @@ public class Shuffler : MonoBehaviour
     {
         unshuffledCards = new List<int>();
         shuffledCards = new List<int>();
-
     }
 
     private void Update()
