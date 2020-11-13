@@ -89,7 +89,6 @@ GameObject:
   - component: {fileID: 4232584240913314010}
   - component: {fileID: 1758284628264247473}
   - component: {fileID: 7678969241702501247}
-  - component: {fileID: 714906508171448266}
   m_Layer: 5
   m_Name: BlankCard
   m_TagString: Untagged
@@ -155,21 +154,6 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!114 &714906508171448266
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1591451748666155650}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ed8924d3e94637842b7875a57865228e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  color: {r: 0, g: 0.8622582, b: 1, a: 0}
-  cost: 7
-  yield: 13
 --- !u!1 &5205780784338844177
 GameObject:
   m_ObjectHideFlags: 0

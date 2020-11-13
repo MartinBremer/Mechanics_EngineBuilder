@@ -1,35 +1,30 @@
 ﻿using UnityEngine;
 using System.Collections.Generic;
+using System.Collections;
 
 public class Shuffler : MonoBehaviour
 {
+    public Deck deck = new Deck();
     public string seed;
     public int deckSize;
 
-    List<int> unshuffledCards;
-    List<int> shuffledCards;
+    List<Card> unshuffledCards;
+    List<Card> shuffledCards;
 
     void Start()
     {
-        unshuffledCards = new List<int>();
-        shuffledCards = new List<int>();
-
-    }
-
-    private void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-            for (int i = 0; i < deckSize; i++)
-                unshuffledCards.Add(i);
-
-            shuffledCards.Clear();
-            ShuffleDeck();
-        }
+        unshuffledCards = new List<Card>();
+        shuffledCards = new List<Card>();
     }
 
     public void ShuffleDeck()
     {
+
+        for (int i = 0; i < deckSize; i++)
+            unshuffledCards.Add(deck.CreateCard());
+
+        shuffledCards.Clear();
+
         System.Random pseudoRandom = new System.Random(seed.GetHashCode());
 
         for (int i = 0; i < deckSize; i++)
