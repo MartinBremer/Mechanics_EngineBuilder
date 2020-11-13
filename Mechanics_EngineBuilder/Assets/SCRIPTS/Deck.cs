@@ -1,28 +1,38 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class Deck : MonoBehaviour
 {
-    public Shuffler shuffler = new Shuffler();
+    public Shuffler shuffler;
+
+    public GameObject[] shuffledDeck;
+
     public GameObject cardPrefab;
+    public CardData[] cardDataArray;
+    int deckSize;
     int counter;
 
     void Start()
     {
-        shuffler.ShuffleDeck();
+        deckSize = cardDataArray.Length;
+        shuffledDeck = shuffler.ShuffleDeck(deckSize);
     }
 
-    
-    public Card CreateCard()
+    public GameObject CreateCard()
     {
         GameObject newCard = Instantiate(cardPrefab, transform.position, Quaternion.identity, transform);
         newCard.name = "Card" + counter;
+
+        Card newCardStats = newCard.GetComponent<Card>();
+        TransferCardDataToCard(cardDataArray[counter], newCardStats);
+
         counter++;
 
-        newCard.AddComponent<Card>(); 
         return newCard;
     }
 
-
+    void TransferCardDataToCard(CardData template, Card _newCard)
+    {
+        _newCard.cost = template.cost;
+        _newCard.yield = template.yield;
+    }
 }

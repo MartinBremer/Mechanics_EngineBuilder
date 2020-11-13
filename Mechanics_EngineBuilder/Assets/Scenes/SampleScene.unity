@@ -242,8 +242,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 160d1e4f1a56e1447bd5889b857baaf7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  seed: 'sushi '
-  deckSize: 33
+  deck: {fileID: 2137401107}
+  seed: martin
 --- !u!4 &813778850
 Transform:
   m_ObjectHideFlags: 0
@@ -351,28 +351,13 @@ GameObject:
   m_Component:
   - component: {fileID: 2137401108}
   - component: {fileID: 2137401107}
-  - component: {fileID: 2137401106}
   m_Layer: 0
-  m_Name: Deck
+  m_Name: TierOneDeck
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &2137401106
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2137401105}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 160d1e4f1a56e1447bd5889b857baaf7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  seed: 
-  deckSize: 0
 --- !u!114 &2137401107
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -385,6 +370,43 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fc5c5f89c125e7c4990182698f188c96, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  shuffler: {fileID: 813778849}
+  shuffledDeck: []
+  cardPrefab: {fileID: 1591451748666155650, guid: 742bd5ee39690e3499fcbc44c73d2917,
+    type: 3}
+  cardDataArray:
+  - {fileID: 11400000, guid: 15ccc239b3b4ebd4587925f233cfe1a9, type: 2}
+  - {fileID: 11400000, guid: 0da42fb10636def468daabc9d73f57d4, type: 2}
+  - {fileID: 11400000, guid: 21f7b1cfd6594194c88b60909bfde6e1, type: 2}
+  - {fileID: 11400000, guid: 548c39428f1f2d24c933c8512db3e42f, type: 2}
+  - {fileID: 11400000, guid: 00e4869ad370d4441829583cb76552be, type: 2}
+  - {fileID: 11400000, guid: 2a2b63391aa039245a087702d54f268b, type: 2}
+  - {fileID: 11400000, guid: 07de3c2045acc414ebf5ff945b8b3f4a, type: 2}
+  - {fileID: 11400000, guid: 2e6ac34434d3d884c80644b646be21e4, type: 2}
+  - {fileID: 11400000, guid: 4aba76e57432ddc42ab738ee882fcc57, type: 2}
+  - {fileID: 11400000, guid: ffdc1c1f915d1dc44848494e1a557370, type: 2}
+  - {fileID: 11400000, guid: 7b85990c82a7efa408853597eb593f53, type: 2}
+  - {fileID: 11400000, guid: 4c597dd9d80a81e41ab24dad9a80d8f0, type: 2}
+  - {fileID: 11400000, guid: 45f8aa7bdd452614bab364a438bacd9c, type: 2}
+  - {fileID: 11400000, guid: cb74f126b601fdb4593da3f3815834e0, type: 2}
+  - {fileID: 11400000, guid: 1a538559332992941b39ab05ae6969a6, type: 2}
+  - {fileID: 11400000, guid: 4d6e3b0dbbcf6824bb4a41c3d738cbd5, type: 2}
+  - {fileID: 11400000, guid: c0c6e89320e31d746ade082fc1519ec7, type: 2}
+  - {fileID: 11400000, guid: 295110f5e82c88147b3dc3019109f3fc, type: 2}
+  - {fileID: 11400000, guid: f6e39ebdd7dcf4441858cbc7311dcf62, type: 2}
+  - {fileID: 11400000, guid: 64f7fe6c74152f440aa047343faf2da1, type: 2}
+  - {fileID: 11400000, guid: 2f0bc7f08a726f3409292fba9be4e975, type: 2}
+  - {fileID: 11400000, guid: 860e29a7bd4d0c94da6e3587f5d44038, type: 2}
+  - {fileID: 11400000, guid: cb25bfdbf91c117409d480b48845939d, type: 2}
+  - {fileID: 11400000, guid: a11fda53a9e545f4280b4c8687810810, type: 2}
+  - {fileID: 11400000, guid: d0a1f0b57487a554fa89eb4a5619c5f6, type: 2}
+  - {fileID: 11400000, guid: 0b0be46635df1c541a6c49a9a37d0c48, type: 2}
+  - {fileID: 11400000, guid: d793cac4524b3c04aabd05fa98fa2598, type: 2}
+  - {fileID: 11400000, guid: 58a4c5db3a7faf749926bab1c1b35742, type: 2}
+  - {fileID: 11400000, guid: ae27d21d11c99414a82f99945f62d59f, type: 2}
+  - {fileID: 11400000, guid: 0f53f383e25a10d4593fa63e90593266, type: 2}
+  - {fileID: 11400000, guid: 1e0f4db4649795b478be0052482a0acf, type: 2}
+  - {fileID: 11400000, guid: db2033cdd6bfa1b41b0fa67ea08ce275, type: 2}
 --- !u!4 &2137401108
 Transform:
   m_ObjectHideFlags: 0

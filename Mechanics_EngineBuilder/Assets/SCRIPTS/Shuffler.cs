@@ -1,44 +1,36 @@
 ﻿using UnityEngine;
 using System.Collections.Generic;
-using System.Collections;
 
 public class Shuffler : MonoBehaviour
 {
-    public Deck deck = new Deck();
+    public Deck deck;
     public string seed;
-    public int deckSize;
 
-    List<Card> unshuffledCards;
-    List<Card> shuffledCards;
-
-    void Start()
+    public GameObject[] ShuffleDeck(int deckSize)
     {
-        unshuffledCards = new List<Card>();
-        shuffledCards = new List<Card>();
-    }
-
-    public void ShuffleDeck()
-    {
+        List<GameObject> unshuffledCards = new List<GameObject>();
 
         for (int i = 0; i < deckSize; i++)
             unshuffledCards.Add(deck.CreateCard());
 
-        shuffledCards.Clear();
+        GameObject[] shuffledCards = new GameObject[deckSize];
 
         System.Random pseudoRandom = new System.Random(seed.GetHashCode());
 
         for (int i = 0; i < deckSize; i++)
         {
             int randomIndex = pseudoRandom.Next(unshuffledCards.Count);
-            shuffledCards.Add(unshuffledCards[randomIndex]);
+            shuffledCards[i] = unshuffledCards[randomIndex];
             unshuffledCards.RemoveAt(randomIndex);
         }
 
         string printOut = $"{seed}: ";
 
-        for (int i = 0; i < shuffledCards.Count; i++)
+        for (int i = 0; i < shuffledCards.Length; i++)
             printOut += $"{shuffledCards[i]}, ";
 
         Debug.Log(printOut);
+
+        return shuffledCards;
     }
 }
