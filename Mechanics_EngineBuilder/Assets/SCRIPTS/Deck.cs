@@ -4,12 +4,12 @@ public class Deck : MonoBehaviour
 {
     public Shuffler shuffler;
 
-    public GameObject[] shuffledDeck;
-
     public GameObject cardPrefab;
     public CardData[] cardDataArray;
     int deckSize;
     int counter;
+
+    public GameObject[] shuffledDeck;
 
     void Start()
     {

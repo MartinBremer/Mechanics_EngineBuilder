@@ -24,13 +24,6 @@ public class Shuffler : MonoBehaviour
             unshuffledCards.RemoveAt(randomIndex);
         }
 
-        string printOut = $"{seed}: ";
-
-        for (int i = 0; i < shuffledCards.Length; i++)
-            printOut += $"{shuffledCards[i]}, ";
-
-        Debug.Log(printOut);
-
         return shuffledCards;
     }
 }
