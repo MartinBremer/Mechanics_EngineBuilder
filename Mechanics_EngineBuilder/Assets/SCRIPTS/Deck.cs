@@ -13,7 +13,7 @@ public class Deck : MonoBehaviour
 
     public GameObject[] shuffledDeck;
 
-    void Start()
+    public void InitializeDeck()
     {
         deckSize = cardDataArray.Length;
         ResetDeck();

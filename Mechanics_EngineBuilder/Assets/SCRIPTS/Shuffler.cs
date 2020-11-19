@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 public class Shuffler : MonoBehaviour
 {
-    public string seed;
+    public static string seed;
 
     public GameObject[] ShuffleDeck(int deckSize, Deck deck)
     {
