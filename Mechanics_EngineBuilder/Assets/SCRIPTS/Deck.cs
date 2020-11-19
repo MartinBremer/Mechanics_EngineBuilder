@@ -35,6 +35,8 @@ public class Deck : MonoBehaviour
         Card newCardStats = newCard.GetComponent<Card>();
         TransferCardDataToCard(cardDataArray[counter], newCardStats);
 
+        newCard.GetComponent<Card>().SetSymbols();
+
         counter++;
 
         return newCard;
@@ -42,8 +44,16 @@ public class Deck : MonoBehaviour
 
     void TransferCardDataToCard(CardData template, Card _newCard)
     {
-        _newCard.cost = template.cost;
-        _newCard.yield = template.yield;
+        _newCard.costBlue = template.costBlue;
+        _newCard.costRed = template.costRed;
+        _newCard.costRed = template.costGreen;
+        _newCard.costPurple = template.costPurple;
+
+        _newCard.yieldBlue = template.yieldBlue;
+        _newCard.yieldRed = template.yieldRed;
+        _newCard.yieldGreen = template.yieldGreen;
+        _newCard.yieldPurple = template.yieldPurple;
+
         _newCard.tier = tier;
     }
 }
