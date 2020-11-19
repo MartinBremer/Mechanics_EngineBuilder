@@ -3,10 +3,9 @@ using System.Collections.Generic;
 
 public class Shuffler : MonoBehaviour
 {
-    public Deck deck;
     public string seed;
 
-    public GameObject[] ShuffleDeck(int deckSize)
+    public GameObject[] ShuffleDeck(int deckSize, Deck deck)
     {
         List<GameObject> unshuffledCards = new List<GameObject>();
 

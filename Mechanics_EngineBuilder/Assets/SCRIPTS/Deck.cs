@@ -2,7 +2,9 @@
 
 public class Deck : MonoBehaviour
 {
+    public int tier;
     public Shuffler shuffler;
+    public Dealer dealer;
 
     public GameObject cardPrefab;
     public CardData[] cardDataArray;
@@ -14,7 +16,15 @@ public class Deck : MonoBehaviour
     void Start()
     {
         deckSize = cardDataArray.Length;
-        shuffledDeck = shuffler.ShuffleDeck(deckSize);
+        ResetDeck();
+
+        dealer.DealCards(this);
+    }
+
+    public void ResetDeck()
+    {
+        // not sure this properly resets everything yet. But it works on start
+        shuffledDeck = shuffler.ShuffleDeck(deckSize, this);
     }
 
     public GameObject CreateCard()
@@ -34,5 +44,6 @@ public class Deck : MonoBehaviour
     {
         _newCard.cost = template.cost;
         _newCard.yield = template.yield;
+        _newCard.tier = tier;
     }
 }
