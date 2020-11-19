@@ -18,7 +18,7 @@ public class Deck : MonoBehaviour
         deckSize = cardDataArray.Length;
         ResetDeck();
 
-        dealer.DealCards(this);
+        dealer.DealCards(this, tier);
     }
 
     public void ResetDeck()
