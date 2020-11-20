@@ -1,9 +1,10 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class StartPanel : MonoBehaviour
 {
-    public InputField inputField;
+    public TMP_InputField inputField;
     public Button button;
 
     public Deck tierOne;
