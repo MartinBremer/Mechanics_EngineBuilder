@@ -4,6 +4,8 @@ using TMPro;
 
 public class StartPanel : MonoBehaviour
 {
+    public UIManager uiManager;
+
     public TMP_InputField inputField;
     public Button button;
 
@@ -34,6 +36,8 @@ public class StartPanel : MonoBehaviour
     {
         if (validSeed)
         {
+            uiManager.SetPlayerNames();
+
             Shuffler.seed = inputField.text;
 
             tierOne.InitializeDeck();
