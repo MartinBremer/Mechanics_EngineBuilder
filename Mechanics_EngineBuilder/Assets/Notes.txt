@@ -1,5 +1,4 @@
 - create grid with with lettered rows and numbered columns for easy reference by players
-- create BoardState class to undo moves
 - let players input names for P1 - P5 before each round (save names from last round)
 - after purchase, cost doesn't matter, so don't display that in the hands, just the yields (split by tier), total resources, 
 	and the number of resource cards of each tier
@@ -7,4 +6,3 @@
 - layout:
 	- compact player hands along the bottom
 	- purchase selection above (with grid) probably horizontal with tier one being A1 to C3 and tier three being A6 - C6 (single column)
-	- include UI number of cards in a pile
