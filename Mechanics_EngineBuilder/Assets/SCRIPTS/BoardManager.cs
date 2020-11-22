@@ -32,7 +32,7 @@ public class BoardManager : MonoBehaviour
 
             TurnManager.NextTurn();
         }
-        else if (BoardManager.selectedCard != null)
+        else if (selectedCard != null)
         {
             TurnManager.activePlayer.MakePurchase(costs, yields);
 
@@ -47,10 +47,10 @@ public class BoardManager : MonoBehaviour
 
     public void SelectPass()
     {
-        if (BoardManager.selectedCard != null)
-            BoardManager.selectedCard.ResetColor();
+        if (selectedCard != null)
+            selectedCard.ResetColor();
 
-        BoardManager.selectedCard = null;
+        selectedCard = null;
 
         passTurn.Select(); 
 
@@ -64,10 +64,10 @@ public class BoardManager : MonoBehaviour
             TurnManager.activePlayer.gTotals + 
             TurnManager.activePlayer.pTotals >= 2000)
         {
-            if (BoardManager.selectedCard != null)
-                BoardManager.selectedCard.ResetColor();
+            if (selectedCard != null)
+                selectedCard.ResetColor();
 
-            BoardManager.selectedCard = null;
+            selectedCard = null;
 
             winCondition.Select();
 

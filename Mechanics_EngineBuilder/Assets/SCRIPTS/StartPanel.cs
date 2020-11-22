@@ -13,6 +13,11 @@ public class StartPanel : MonoBehaviour
     public Deck tierTwo;
     public Deck tierThree;
 
+    public HandUI p1;
+    public HandUI p2;
+    public HandUI p3;
+    public HandUI p4;
+
     bool validSeed;
 
     void Update()
@@ -46,6 +51,11 @@ public class StartPanel : MonoBehaviour
 
             StateMachine.gameStarted = true;
             TurnManager.NextTurn();
+
+            p1.UpdateHandUI(true);
+            p2.UpdateHandUI(true);
+            p3.UpdateHandUI(true);
+            p4.UpdateHandUI(true);
 
             gameObject.SetActive(false);
         }

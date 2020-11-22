@@ -129,9 +129,52 @@ public class Player : MonoBehaviour
 
     void CalculateTotals()
     {
+        while (bOrb.x >= 10)
+        {
+            bOrb.x -= 10;
+            bTalisman.x++;
+        }
+
+        while (bTalisman.x >= 10)
+        {
+            bTalisman.x -= 10;
+            bCharm.x++;
+        }
+
+        while (rOrb.x >= 10)
+        {
+            rOrb.x -= 10;
+            rTalisman.x++;
+        }
+
+        while (rTalisman.x >= 10)
+        {
+            rTalisman.x -= 10;
+            rCharm.x++;
+        }
+
+        while (gOrb.x >= 10)
+        {
+            gOrb.x -= 10;
+            gTalisman.x++;
+        }
+
+        while (gTalisman.x >= 10)
+        {
+            gTalisman.x -= 10;
+            gCharm.x++;
+        }
+
         while (pOrb.x >= 10)
         {
+            pOrb.x -= 10;
+            pTalisman.x++;
+        }
 
+        while (pTalisman.x >= 10)
+        {
+            pTalisman.x -= 10;
+            pCharm.x++;
         }
 
         bTotals = Mathf.RoundToInt(bOrb.x + bTalisman.x * 10 + bCharm.x * 100);
@@ -196,38 +239,38 @@ public class Player : MonoBehaviour
         // z = green
         while (_costs.z >= 100)
         {
-            rCharm.x--;
+            gCharm.x--;
             _costs.z -= 100;
         }
 
         while (_costs.z >= 10)
         {
-            rTalisman.x--;
+            gTalisman.x--;
             _costs.z -= 10;
         }
 
         while (_costs.z >= 1)
         {
-            rOrb.x--;
+            gOrb.x--;
             _costs.z--;
         }
 
         // w = purple
         while (_costs.w >= 100)
         {
-            rCharm.x--;
+            pCharm.x--;
             _costs.w -= 100;
         }
 
         while (_costs.w >= 10)
         {
-            rTalisman.x--;
+            pTalisman.x--;
             _costs.w -= 10;
         }
 
         while (_costs.w >= 1)
         {
-            rOrb.x--;
+            pOrb.x--;
             _costs.w--;
         }
     }
@@ -277,38 +320,38 @@ public class Player : MonoBehaviour
         // z = green
         while (_yields.z >= 100)
         {
-            rCharm.y++;
+            gCharm.y++;
             _yields.z -= 100;
         }
 
         while (_yields.z >= 10)
         {
-            rTalisman.y++;
+            gTalisman.y++;
             _yields.z -= 10;
         }
 
         while (_yields.z >= 1)
         {
-            rOrb.y++;
+            gOrb.y++;
             _yields.z--;
         }
 
         // w = purple
         while (_yields.w >= 100)
         {
-            rCharm.y++;
+            pCharm.y++;
             _yields.w -= 100;
         }
 
         while (_yields.w >= 10)
         {
-            rTalisman.y++;
+            pTalisman.y++;
             _yields.w -= 10;
         }
 
         while (_yields.w >= 1)
         {
-            rOrb.y++;
+            pOrb.y++;
             _yields.w--;
         }
     }

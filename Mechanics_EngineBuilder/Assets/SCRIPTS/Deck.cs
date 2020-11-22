@@ -45,7 +45,7 @@ public class Deck : MonoBehaviour
     {
         _newCard.costBlue = template.costBlue;
         _newCard.costRed = template.costRed;
-        _newCard.costRed = template.costGreen;
+        _newCard.costGreen = template.costGreen;
         _newCard.costPurple = template.costPurple;
 
         _newCard.yieldBlue = template.yieldBlue;
@@ -54,7 +54,5 @@ public class Deck : MonoBehaviour
         _newCard.yieldPurple = template.yieldPurple;
 
         _newCard.tier = tier;
-
-        Debug.Log($"{_newCard.name} / {cardDataArray[counter].name}: {_newCard.costBlue}, {_newCard.costRed}, {_newCard.costGreen}, {_newCard.costPurple}");
     }
 }

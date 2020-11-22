@@ -136,9 +136,9 @@ public class Card : MonoBehaviour
         Player active = TurnManager.activePlayer;
 
         if (active.bTotals >= costBlue * multiplier &&
-            active.bTotals >= costBlue * multiplier &&
-            active.bTotals >= costBlue * multiplier &&
-            active.bTotals >= costBlue * multiplier
+            active.rTotals >= costRed * multiplier &&
+            active.gTotals >= costGreen * multiplier &&
+            active.pTotals >= costPurple * multiplier
             )
         {
             return true;

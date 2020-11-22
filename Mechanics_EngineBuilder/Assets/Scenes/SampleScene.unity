@@ -3557,9 +3557,9 @@ MonoBehaviour:
   myTurn: 1
   activeTier: 1
   bOrb: {x: 0, y: 2}
-  rOrb: {x: 0, y: 0}
-  gOrb: {x: 0, y: 0}
-  pOrb: {x: 0, y: 0}
+  rOrb: {x: 1, y: 0}
+  gOrb: {x: 1, y: 0}
+  pOrb: {x: 1, y: 0}
   bTalisman: {x: 0, y: 0}
   rTalisman: {x: 0, y: 0}
   gTalisman: {x: 0, y: 0}
@@ -10953,9 +10953,9 @@ MonoBehaviour:
   tierThreeToggle: {fileID: 1231174419}
   myTurn: 0
   activeTier: 1
-  bOrb: {x: 0, y: 0}
-  rOrb: {x: 0, y: 0}
-  gOrb: {x: 0, y: 0}
+  bOrb: {x: 1, y: 0}
+  rOrb: {x: 1, y: 0}
+  gOrb: {x: 1, y: 0}
   pOrb: {x: 0, y: 2}
   bTalisman: {x: 0, y: 0}
   rTalisman: {x: 0, y: 0}
@@ -13744,10 +13744,10 @@ MonoBehaviour:
   tierThreeToggle: {fileID: 552218561}
   myTurn: 0
   activeTier: 1
-  bOrb: {x: 0, y: 0}
-  rOrb: {x: 0, y: 0}
+  bOrb: {x: 1, y: 0}
+  rOrb: {x: 1, y: 0}
   gOrb: {x: 0, y: 2}
-  pOrb: {x: 0, y: 0}
+  pOrb: {x: 1, y: 0}
   bTalisman: {x: 0, y: 0}
   rTalisman: {x: 0, y: 0}
   gTalisman: {x: 0, y: 0}
@@ -14666,10 +14666,10 @@ MonoBehaviour:
   tierThreeToggle: {fileID: 1988120130}
   myTurn: 0
   activeTier: 1
-  bOrb: {x: 0, y: 0}
+  bOrb: {x: 1, y: 0}
   rOrb: {x: 0, y: 2}
-  gOrb: {x: 0, y: 0}
-  pOrb: {x: 0, y: 0}
+  gOrb: {x: 1, y: 0}
+  pOrb: {x: 1, y: 0}
   bTalisman: {x: 0, y: 0}
   rTalisman: {x: 0, y: 0}
   gTalisman: {x: 0, y: 0}
@@ -37881,6 +37881,10 @@ MonoBehaviour:
   tierOne: {fileID: 2137401107}
   tierTwo: {fileID: 1525930737}
   tierThree: {fileID: 1182689016}
+  p1: {fileID: 126896647}
+  p2: {fileID: 646710633}
+  p3: {fileID: 584752493}
+  p4: {fileID: 465267149}
 --- !u!1 &1957742435
 GameObject:
   m_ObjectHideFlags: 0
