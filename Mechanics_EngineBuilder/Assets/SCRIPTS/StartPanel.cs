@@ -45,6 +45,7 @@ public class StartPanel : MonoBehaviour
             tierThree.InitializeDeck();
 
             StateMachine.gameStarted = true;
+            TurnManager.NextTurn();
 
             gameObject.SetActive(false);
         }

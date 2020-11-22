@@ -3323,6 +3323,8 @@ GameObject:
   - component: {fileID: 126896643}
   - component: {fileID: 126896645}
   - component: {fileID: 126896644}
+  - component: {fileID: 126896646}
+  - component: {fileID: 126896647}
   m_Layer: 5
   m_Name: Player One
   m_TagString: Untagged
@@ -3391,6 +3393,81 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 126896642}
   m_CullTransparentMesh: 0
+--- !u!114 &126896646
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 126896642}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4973e50a68c0a00439c0a2e572afe3de, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerID: 0
+  handUI: {fileID: 126896647}
+  tierOneToggle: {fileID: 1422492561}
+  tierTwoToggle: {fileID: 362512132}
+  tierThreeToggle: {fileID: 1578187209}
+  myTurn: 1
+  activeTier: 1
+  bOrb: {x: 0, y: 2}
+  rOrb: {x: 0, y: 0}
+  gOrb: {x: 0, y: 0}
+  pOrb: {x: 0, y: 0}
+  bTalisman: {x: 0, y: 0}
+  rTalisman: {x: 0, y: 0}
+  gTalisman: {x: 0, y: 0}
+  pTalisman: {x: 0, y: 0}
+  bCharm: {x: 0, y: 0}
+  rCharm: {x: 0, y: 0}
+  gCharm: {x: 0, y: 0}
+  pCharm: {x: 0, y: 0}
+--- !u!114 &126896647
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 126896642}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ed814061da839cf4a809ec62511683ba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 126896646}
+  tierOneYield: {fileID: 136923033}
+  tierTwoYield: {fileID: 1326457671}
+  tierThreeYield: {fileID: 1836504473}
+  bOrb: {fileID: 2105188956}
+  rOrb: {fileID: 563209367}
+  gOrb: {fileID: 1300233316}
+  pOrb: {fileID: 967713077}
+  bTalisman: {fileID: 1559503807}
+  rTalisman: {fileID: 1375870630}
+  gTalisman: {fileID: 1582052178}
+  pTalisman: {fileID: 2027080103}
+  bCharm: {fileID: 1181618149}
+  rCharm: {fileID: 1239730917}
+  gCharm: {fileID: 1467183194}
+  pCharm: {fileID: 1570446629}
+  bTotals: {fileID: 1430672939}
+  rTotals: {fileID: 2103180746}
+  gTotals: {fileID: 211605904}
+  pTotals: {fileID: 1303935009}
+  bOrbYield: {fileID: 965826588}
+  rOrbYield: {fileID: 1464951852}
+  gOrbYield: {fileID: 774366031}
+  pOrbYield: {fileID: 96620604}
+  bTalismanYield: {fileID: 544839422}
+  rTalismanYield: {fileID: 1968972275}
+  gTalismanYield: {fileID: 381259833}
+  pTalismanYield: {fileID: 300842426}
+  bCharmYield: {fileID: 207737826}
+  rCharmYield: {fileID: 734018034}
+  gCharmYield: {fileID: 1271906407}
+  pCharmYield: {fileID: 1372543908}
 --- !u!1 &128801460
 GameObject:
   m_ObjectHideFlags: 0
@@ -3821,6 +3898,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e6e775233e62454448c747971c70c21e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  player: {fileID: 646710632}
+  handUI: {fileID: 646710633}
   self: {fileID: 1064860109}
   other1: {fileID: 476198372}
   other2: {fileID: 1988120130}
@@ -4457,6 +4536,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e6e775233e62454448c747971c70c21e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  player: {fileID: 126896646}
+  handUI: {fileID: 126896647}
   self: {fileID: 1422492561}
   other1: {fileID: 362512132}
   other2: {fileID: 1578187209}
@@ -6274,7 +6355,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &255448307
 GameObject:
@@ -7417,6 +7498,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e6e775233e62454448c747971c70c21e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  player: {fileID: 465267148}
+  handUI: {fileID: 465267149}
   self: {fileID: 37048347}
   other1: {fileID: 569758649}
   other2: {fileID: 1231174419}
@@ -9959,6 +10042,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e6e775233e62454448c747971c70c21e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  player: {fileID: 584752492}
+  handUI: {fileID: 584752493}
   self: {fileID: 32403914}
   other1: {fileID: 1864429781}
   other2: {fileID: 552218561}
@@ -10630,6 +10715,8 @@ GameObject:
   - component: {fileID: 465267145}
   - component: {fileID: 465267147}
   - component: {fileID: 465267146}
+  - component: {fileID: 465267148}
+  - component: {fileID: 465267149}
   m_Layer: 5
   m_Name: Player Four
   m_TagString: Untagged
@@ -10698,6 +10785,81 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 465267144}
   m_CullTransparentMesh: 0
+--- !u!114 &465267148
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 465267144}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4973e50a68c0a00439c0a2e572afe3de, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerID: 3
+  handUI: {fileID: 465267149}
+  tierOneToggle: {fileID: 569758649}
+  tierTwoToggle: {fileID: 37048347}
+  tierThreeToggle: {fileID: 1231174419}
+  myTurn: 0
+  activeTier: 1
+  bOrb: {x: 0, y: 0}
+  rOrb: {x: 0, y: 0}
+  gOrb: {x: 0, y: 0}
+  pOrb: {x: 0, y: 2}
+  bTalisman: {x: 0, y: 0}
+  rTalisman: {x: 0, y: 0}
+  gTalisman: {x: 0, y: 0}
+  pTalisman: {x: 0, y: 0}
+  bCharm: {x: 0, y: 0}
+  rCharm: {x: 0, y: 0}
+  gCharm: {x: 0, y: 0}
+  pCharm: {x: 0, y: 0}
+--- !u!114 &465267149
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 465267144}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ed814061da839cf4a809ec62511683ba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 465267148}
+  tierOneYield: {fileID: 1385222287}
+  tierTwoYield: {fileID: 1347295373}
+  tierThreeYield: {fileID: 1180741524}
+  bOrb: {fileID: 1100533483}
+  rOrb: {fileID: 1769021517}
+  gOrb: {fileID: 210953257}
+  pOrb: {fileID: 940703710}
+  bTalisman: {fileID: 1784117385}
+  rTalisman: {fileID: 2031779381}
+  gTalisman: {fileID: 615443653}
+  pTalisman: {fileID: 100423453}
+  bCharm: {fileID: 121435206}
+  rCharm: {fileID: 667742741}
+  gCharm: {fileID: 431258024}
+  pCharm: {fileID: 1116290867}
+  bTotals: {fileID: 932004657}
+  rTotals: {fileID: 8132995}
+  gTotals: {fileID: 1151643744}
+  pTotals: {fileID: 954002216}
+  bOrbYield: {fileID: 433979191}
+  rOrbYield: {fileID: 2102343168}
+  gOrbYield: {fileID: 1893781893}
+  pOrbYield: {fileID: 242467808}
+  bTalismanYield: {fileID: 834477445}
+  rTalismanYield: {fileID: 722997571}
+  gTalismanYield: {fileID: 148681416}
+  pTalismanYield: {fileID: 387797391}
+  bCharmYield: {fileID: 1757127078}
+  rCharmYield: {fileID: 1579360252}
+  gCharmYield: {fileID: 391201666}
+  pCharmYield: {fileID: 90886517}
 --- !u!1 &466412755
 GameObject:
   m_ObjectHideFlags: 0
@@ -11602,6 +11764,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e6e775233e62454448c747971c70c21e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  player: {fileID: 465267148}
+  handUI: {fileID: 465267149}
   self: {fileID: 569758649}
   other1: {fileID: 37048347}
   other2: {fileID: 1231174419}
@@ -11747,6 +11911,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e6e775233e62454448c747971c70c21e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  player: {fileID: 126896646}
+  handUI: {fileID: 126896647}
   self: {fileID: 362512132}
   other1: {fileID: 1422492561}
   other2: {fileID: 1578187209}
@@ -13336,6 +13502,8 @@ GameObject:
   - component: {fileID: 584752489}
   - component: {fileID: 584752491}
   - component: {fileID: 584752490}
+  - component: {fileID: 584752492}
+  - component: {fileID: 584752493}
   m_Layer: 5
   m_Name: Player Three
   m_TagString: Untagged
@@ -13404,6 +13572,81 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 584752488}
   m_CullTransparentMesh: 0
+--- !u!114 &584752492
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 584752488}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4973e50a68c0a00439c0a2e572afe3de, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerID: 2
+  handUI: {fileID: 584752493}
+  tierOneToggle: {fileID: 32403914}
+  tierTwoToggle: {fileID: 1864429781}
+  tierThreeToggle: {fileID: 552218561}
+  myTurn: 0
+  activeTier: 1
+  bOrb: {x: 0, y: 0}
+  rOrb: {x: 0, y: 0}
+  gOrb: {x: 0, y: 2}
+  pOrb: {x: 0, y: 0}
+  bTalisman: {x: 0, y: 0}
+  rTalisman: {x: 0, y: 0}
+  gTalisman: {x: 0, y: 0}
+  pTalisman: {x: 0, y: 0}
+  bCharm: {x: 0, y: 0}
+  rCharm: {x: 0, y: 0}
+  gCharm: {x: 0, y: 0}
+  pCharm: {x: 0, y: 0}
+--- !u!114 &584752493
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 584752488}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ed814061da839cf4a809ec62511683ba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 584752492}
+  tierOneYield: {fileID: 693921390}
+  tierTwoYield: {fileID: 4951288}
+  tierThreeYield: {fileID: 1728572828}
+  bOrb: {fileID: 66801305}
+  rOrb: {fileID: 529168771}
+  gOrb: {fileID: 352761618}
+  pOrb: {fileID: 1292495982}
+  bTalisman: {fileID: 2043444380}
+  rTalisman: {fileID: 2065774841}
+  gTalisman: {fileID: 476124177}
+  pTalisman: {fileID: 866280781}
+  bCharm: {fileID: 1203619682}
+  rCharm: {fileID: 1804748267}
+  gCharm: {fileID: 891125627}
+  pCharm: {fileID: 1776482466}
+  bTotals: {fileID: 2111396099}
+  rTotals: {fileID: 728927444}
+  gTotals: {fileID: 1106037923}
+  pTotals: {fileID: 814961387}
+  bOrbYield: {fileID: 24927542}
+  rOrbYield: {fileID: 392994241}
+  gOrbYield: {fileID: 1325946256}
+  pOrbYield: {fileID: 1025872096}
+  bTalismanYield: {fileID: 1440007249}
+  rTalismanYield: {fileID: 1995332402}
+  gTalismanYield: {fileID: 631821815}
+  pTalismanYield: {fileID: 2057103891}
+  bCharmYield: {fileID: 964631681}
+  rCharmYield: {fileID: 914263971}
+  gCharmYield: {fileID: 364794888}
+  pCharmYield: {fileID: 352531414}
 --- !u!1 &589442623
 GameObject:
   m_ObjectHideFlags: 0
@@ -13503,7 +13746,7 @@ RectTransform:
   - {fileID: 2137401108}
   - {fileID: 1953345981}
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -14177,6 +14420,8 @@ GameObject:
   - component: {fileID: 646710629}
   - component: {fileID: 646710631}
   - component: {fileID: 646710630}
+  - component: {fileID: 646710632}
+  - component: {fileID: 646710633}
   m_Layer: 5
   m_Name: Player Two
   m_TagString: Untagged
@@ -14245,6 +14490,81 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 646710628}
   m_CullTransparentMesh: 0
+--- !u!114 &646710632
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 646710628}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4973e50a68c0a00439c0a2e572afe3de, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerID: 1
+  handUI: {fileID: 646710633}
+  tierOneToggle: {fileID: 476198372}
+  tierTwoToggle: {fileID: 1064860109}
+  tierThreeToggle: {fileID: 1988120130}
+  myTurn: 0
+  activeTier: 1
+  bOrb: {x: 0, y: 0}
+  rOrb: {x: 0, y: 2}
+  gOrb: {x: 0, y: 0}
+  pOrb: {x: 0, y: 0}
+  bTalisman: {x: 0, y: 0}
+  rTalisman: {x: 0, y: 0}
+  gTalisman: {x: 0, y: 0}
+  pTalisman: {x: 0, y: 0}
+  bCharm: {x: 0, y: 0}
+  rCharm: {x: 0, y: 0}
+  gCharm: {x: 0, y: 0}
+  pCharm: {x: 0, y: 0}
+--- !u!114 &646710633
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 646710628}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ed814061da839cf4a809ec62511683ba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 646710632}
+  tierOneYield: {fileID: 750158084}
+  tierTwoYield: {fileID: 295638230}
+  tierThreeYield: {fileID: 1832759148}
+  bOrb: {fileID: 1217913542}
+  rOrb: {fileID: 379803730}
+  gOrb: {fileID: 1718722867}
+  pOrb: {fileID: 1411053194}
+  bTalisman: {fileID: 1407080347}
+  rTalisman: {fileID: 1728084504}
+  gTalisman: {fileID: 2008575679}
+  pTalisman: {fileID: 909743525}
+  bCharm: {fileID: 217238413}
+  rCharm: {fileID: 702496601}
+  gCharm: {fileID: 1816347018}
+  pCharm: {fileID: 28718137}
+  bTotals: {fileID: 248348864}
+  rTotals: {fileID: 2137550402}
+  gTotals: {fileID: 976002706}
+  pTotals: {fileID: 418179420}
+  bOrbYield: {fileID: 1029955628}
+  rOrbYield: {fileID: 516909981}
+  gOrbYield: {fileID: 1334134686}
+  pOrbYield: {fileID: 2131147352}
+  bTalismanYield: {fileID: 656968590}
+  rTalismanYield: {fileID: 6555818}
+  gTalismanYield: {fileID: 1689666553}
+  pTalismanYield: {fileID: 559478556}
+  bCharmYield: {fileID: 1882926705}
+  rCharmYield: {fileID: 482003607}
+  gCharmYield: {fileID: 965171939}
+  pCharmYield: {fileID: 1524593431}
 --- !u!1 &650275993
 GameObject:
   m_ObjectHideFlags: 0
@@ -14296,6 +14616,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e6e775233e62454448c747971c70c21e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  player: {fileID: 646710632}
+  handUI: {fileID: 646710633}
   self: {fileID: 1988120130}
   other1: {fileID: 476198372}
   other2: {fileID: 1064860109}
@@ -17001,7 +17323,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &814961385
 GameObject:
@@ -21603,6 +21925,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e6e775233e62454448c747971c70c21e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  player: {fileID: 584752492}
+  handUI: {fileID: 584752493}
   self: {fileID: 1864429781}
   other1: {fileID: 32403914}
   other2: {fileID: 552218561}
@@ -22048,7 +22372,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1081735516
 GameObject:
@@ -27453,6 +27777,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e6e775233e62454448c747971c70c21e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  player: {fileID: 465267148}
+  handUI: {fileID: 465267149}
   self: {fileID: 1231174419}
   other1: {fileID: 569758649}
   other2: {fileID: 37048347}
@@ -28049,6 +28375,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e6e775233e62454448c747971c70c21e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  player: {fileID: 646710632}
+  handUI: {fileID: 646710633}
   self: {fileID: 476198372}
   other1: {fileID: 1064860109}
   other2: {fileID: 1988120130}
@@ -30982,6 +31310,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e6e775233e62454448c747971c70c21e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  player: {fileID: 126896646}
+  handUI: {fileID: 126896647}
   self: {fileID: 1578187209}
   other1: {fileID: 1422492561}
   other2: {fileID: 362512132}
@@ -31905,7 +32235,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Enter seed (min: 6 letters)'
+  m_text: Enter seed (min. 6 letters)
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -36265,6 +36595,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e6e775233e62454448c747971c70c21e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  player: {fileID: 584752492}
+  handUI: {fileID: 584752493}
   self: {fileID: 552218561}
   other1: {fileID: 32403914}
   other2: {fileID: 1864429781}
@@ -37232,7 +37564,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1953345980
 GameObject:
@@ -39784,6 +40116,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2076224636}
+  - component: {fileID: 2076224638}
   m_Layer: 0
   m_Name: Turn Manager
   m_TagString: Untagged
@@ -39803,8 +40136,20 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2076224638
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2076224635}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e5b74c37598332a47ab23b522e03e939, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2078492298
 GameObject:
   m_ObjectHideFlags: 0
