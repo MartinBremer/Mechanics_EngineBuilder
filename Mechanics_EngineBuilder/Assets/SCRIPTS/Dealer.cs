@@ -27,35 +27,39 @@ public class Dealer : MonoBehaviour
     bool newGame = true;
     bool countersInitialized;
 
-    public void DealCards(Deck activeDeck, int tier)
+    public void DealCards(Deck activeDeck)
     {
         if (newGame)
             InitializeLists();
 
         int counter = 0;
 
-        foreach (bool spotTaken in SelectDeckBool(tier))
+        foreach (bool spotTaken in SelectDeckBool(activeDeck.tier))
         {
-            if (!spotTaken && activeDeck.shuffledDeck.Length > 0)
+            if (!spotTaken && activeDeck.shuffledDeck.Count > 0)
             {
-                activeDeck.shuffledDeck[counter].transform.position = SelectDeckPosition(tier)[counter].position;
-                SelectDeckBool(tier)[counter] = true;
+                activeDeck.shuffledDeck[counter].transform.position = SelectDeckPosition(activeDeck.tier)[counter].position;
+                SelectDeckBool(activeDeck.tier)[counter] = true;
 
-                if (tier == 1)
+                if (activeDeck.tier == 1)
                     counterDeck1--;
-                else if (tier == 2)
+                else if (activeDeck.tier == 2)
                     counterDeck2--;
-                else if (tier == 3)
+                else if (activeDeck.tier == 3)
                     counterDeck3--;
 
-                if (countersInitialized)
-                    UpdateDeckCounters(tier);
-            }
+                activeDeck.shuffledDeck[counter].GetComponent<Card>().boardPosition = SelectDeckPosition(activeDeck.tier)[counter];
 
+                if (countersInitialized)
+                    UpdateDeckCounters(activeDeck.tier);
+                
+                activeDeck.shuffledDeck.Remove(activeDeck.shuffledDeck[counter]);
+            }
+            
             counter++;
         }
 
-        if (!countersInitialized && tier == 3)
+        if (!countersInitialized && activeDeck.tier == 3)
             InitializeCounters();
     }
 
@@ -94,9 +98,9 @@ public class Dealer : MonoBehaviour
 
     void InitializeCounters()
     {
-        counterDeck1 += tierOne.shuffledDeck.Length;
-        counterDeck2 += tierTwo.shuffledDeck.Length;
-        counterDeck3 += tierThree.shuffledDeck.Length;
+        counterDeck1 += tierOne.shuffledDeck.Count + cardPositionsT1.Count;
+        counterDeck2 += tierTwo.shuffledDeck.Count + cardPositionsT2.Count;
+        counterDeck3 += tierThree.shuffledDeck.Count + cardPositionsT3.Count;
 
         for (int i = 1; i < 4; i++)
             UpdateDeckCounters(i);
@@ -112,5 +116,53 @@ public class Dealer : MonoBehaviour
             counterDeck2Text.text = counterDeck2.ToString();
         else if (tier == 3)
             counterDeck3Text.text = counterDeck3.ToString();
+    }
+
+    public void ReplaceCard(Card cardToReplace)
+    {
+        int counter = 0;
+
+        if (cardToReplace.tier == 1)
+        {
+            foreach (Transform t in cardPositionsT1)
+            {
+                if (t == cardToReplace.boardPosition)
+                    break;
+                else
+                    counter++;
+            }
+
+            spotTakenListT1[counter] = false;
+
+            DealCards(tierOne);
+        }
+        else if (cardToReplace.tier == 2)
+        {
+            foreach (Transform t in cardPositionsT2)
+            {
+                if (t == cardToReplace.boardPosition)
+                    break;
+                else
+                    counter++;
+            }
+
+            spotTakenListT2[counter] = false;
+
+            DealCards(tierTwo);
+        }
+        else if (cardToReplace.tier == 3)
+        {
+            foreach (Transform t in cardPositionsT3)
+            {
+                if (t == cardToReplace.boardPosition)
+                    break;
+                else
+                    counter++;
+            }
+
+            spotTakenListT3[counter] = false;
+
+            DealCards(tierThree);
+        }
     }
 }

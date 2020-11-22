@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using System.Collections.Generic;
 
 public class Deck : MonoBehaviour
 {
@@ -11,14 +12,14 @@ public class Deck : MonoBehaviour
     int deckSize;
     int counter;
 
-    public GameObject[] shuffledDeck;
+    public List<GameObject> shuffledDeck = new List<GameObject>();
 
     public void InitializeDeck()
     {
         deckSize = cardDataArray.Length;
         ResetDeck();
 
-        dealer.DealCards(this, tier);
+        dealer.DealCards(this);
     }
 
     public void ResetDeck()

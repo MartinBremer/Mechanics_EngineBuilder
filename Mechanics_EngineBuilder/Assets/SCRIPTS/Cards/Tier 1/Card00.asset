@@ -13,9 +13,9 @@ MonoBehaviour:
   m_Name: Card00
   m_EditorClassIdentifier: 
   costBlue: 2
-  costRed: 1
+  costRed: 0
   costGreen: 0
-  costPurple: 2
+  costPurple: 0
   yieldBlue: 1
   yieldRed: 0
   yieldGreen: 1

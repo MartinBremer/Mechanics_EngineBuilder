@@ -36,6 +36,11 @@ public class Player : MonoBehaviour
     public Vector2 pCharm;
     #endregion
 
+    public int bTotals;
+    public int rTotals;
+    public int gTotals;
+    public int pTotals;
+
     void Start()
     {
         handTierOne = new Vector2[] { bOrb, rOrb, gOrb, pOrb};
@@ -73,6 +78,10 @@ public class Player : MonoBehaviour
 
     void HarvestPhase()
     {
+        handTierOne = new Vector2[] { bOrb, rOrb, gOrb, pOrb };
+        handTierTwo = new Vector2[] { bTalisman, rTalisman, gTalisman, pTalisman };
+        handTierThree = new Vector2[] { bCharm, rCharm, gCharm, pCharm };
+
         int i = 0;
 
         if (activeTier == 1)
@@ -113,6 +122,194 @@ public class Player : MonoBehaviour
             rCharm.x = handTierThree[1].x;
             gCharm.x = handTierThree[2].x;
             pCharm.x = handTierThree[3].x;
+        }
+
+        CalculateTotals();
+    }
+
+    void CalculateTotals()
+    {
+        while (pOrb.x >= 10)
+        {
+
+        }
+
+        bTotals = Mathf.RoundToInt(bOrb.x + bTalisman.x * 10 + bCharm.x * 100);
+        rTotals = Mathf.RoundToInt(rOrb.x + rTalisman.x * 10 + rCharm.x * 100);
+        gTotals = Mathf.RoundToInt(gOrb.x + gTalisman.x * 10 + gCharm.x * 100);
+        pTotals = Mathf.RoundToInt(pOrb.x + pTalisman.x * 10 + pCharm.x * 100);
+    }
+
+    public void MakePurchase(Vector4 costs, Vector4 yields)
+    {
+        MakePayment(costs);
+        AddYield(yields);
+
+        CalculateTotals();
+
+        handUI.UpdateHandUI(true);
+        handUI.UpdateHandUI(false);
+    }
+
+    void MakePayment(Vector4 costs)
+    {
+        Vector4 _costs = costs;
+
+        // x = blue
+        while (_costs.x >= 100)
+        {
+            bCharm.x--;
+            _costs.x -= 100;
+        }
+
+        while (_costs.x >= 10)
+        {
+            bTalisman.x--;
+            _costs.x -= 10;
+        }
+
+        while (_costs.x >= 1)
+        {
+            bOrb.x--;
+            _costs.x--;
+        }
+
+        // y = red
+        while (_costs.y >= 100)
+        {
+            rCharm.x--;
+            _costs.y -= 100;
+        }
+
+        while (_costs.y >= 10)
+        {
+            rTalisman.x--;
+            _costs.y -= 10;
+        }
+
+        while (_costs.y >= 1)
+        {
+            rOrb.x--;
+            _costs.y--;
+        }
+
+        // z = green
+        while (_costs.z >= 100)
+        {
+            rCharm.x--;
+            _costs.z -= 100;
+        }
+
+        while (_costs.z >= 10)
+        {
+            rTalisman.x--;
+            _costs.z -= 10;
+        }
+
+        while (_costs.z >= 1)
+        {
+            rOrb.x--;
+            _costs.z--;
+        }
+
+        // w = purple
+        while (_costs.w >= 100)
+        {
+            rCharm.x--;
+            _costs.w -= 100;
+        }
+
+        while (_costs.w >= 10)
+        {
+            rTalisman.x--;
+            _costs.w -= 10;
+        }
+
+        while (_costs.w >= 1)
+        {
+            rOrb.x--;
+            _costs.w--;
+        }
+    }
+
+    void AddYield(Vector4 yields)
+    {
+        Vector4 _yields = yields;
+
+        // x = blue
+        while (_yields.x >= 100)
+        {
+            bCharm.y++;
+            _yields.x -= 100;
+        }
+
+        while (_yields.x >= 10)
+        {
+            bTalisman.y++;
+            _yields.x -= 10;
+        }
+
+        while (_yields.x >= 1)
+        {
+            bOrb.y++;
+            _yields.x--;
+        }
+
+        // y = red
+        while (_yields.y >= 100)
+        {
+            rCharm.y++;
+            _yields.y -= 100;
+        }
+
+        while (_yields.y >= 10)
+        {
+            rTalisman.y++;
+            _yields.y -= 10;
+        }
+
+        while (_yields.y >= 1)
+        {
+            rOrb.y++;
+            _yields.y--;
+        }
+
+        // z = green
+        while (_yields.z >= 100)
+        {
+            rCharm.y++;
+            _yields.z -= 100;
+        }
+
+        while (_yields.z >= 10)
+        {
+            rTalisman.y++;
+            _yields.z -= 10;
+        }
+
+        while (_yields.z >= 1)
+        {
+            rOrb.y++;
+            _yields.z--;
+        }
+
+        // w = purple
+        while (_yields.w >= 100)
+        {
+            rCharm.y++;
+            _yields.w -= 100;
+        }
+
+        while (_yields.w >= 10)
+        {
+            rTalisman.y++;
+            _yields.w -= 10;
+        }
+
+        while (_yields.w >= 1)
+        {
+            rOrb.y++;
+            _yields.w--;
         }
     }
 }

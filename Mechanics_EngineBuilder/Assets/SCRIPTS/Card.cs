@@ -6,6 +6,8 @@ public class Card : MonoBehaviour
     public Image self;
     public Button button;
 
+    public Transform boardPosition;
+
     public Sprite blue;
     public Sprite red;
     public Sprite green;
@@ -112,12 +114,45 @@ public class Card : MonoBehaviour
 
     public void SelectCard()
     {
-        if (BoardManager.selectedCard != null)
-            BoardManager.selectedCard.ResetColor();
+        if (CheckResources())
+        {
+            BoardManager.pass = false;
+            BoardManager.win = false;
 
-        BoardManager.selectedCard = this;
+            SetCostsAndYields();
 
-        self.color = Color.green;
+            if (BoardManager.selectedCard != null)
+                BoardManager.selectedCard.ResetColor();
+
+            BoardManager.selectedCard = this;
+
+            self.color = Color.green;
+        }
+    }
+
+    bool CheckResources()
+    {
+        int multiplier = tier == 3 ? 100 : tier == 2 ? 10 : 1;
+        Player active = TurnManager.activePlayer;
+
+        if (active.bTotals >= costBlue * multiplier &&
+            active.bTotals >= costBlue * multiplier &&
+            active.bTotals >= costBlue * multiplier &&
+            active.bTotals >= costBlue * multiplier
+            )
+        {
+            return true;
+        }
+        else
+            return false;
+    }
+
+    void SetCostsAndYields()
+    {
+        int multiplier = tier == 3 ? 100 : tier == 2 ? 10 : 1;
+
+        BoardManager.costs = new Vector4(costBlue, costRed, costGreen, costPurple) * multiplier;
+        BoardManager.yields = new Vector4(yieldBlue, yieldRed, yieldGreen, yieldPurple) * multiplier;
     }
 
     public void ResetColor()
