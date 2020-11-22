@@ -4,6 +4,7 @@ using UnityEngine.UI;
 public class Card : MonoBehaviour
 {
     public Image self;
+    public Button button;
 
     public Sprite blue;
     public Sprite red;
@@ -27,6 +28,13 @@ public class Card : MonoBehaviour
 
     int counterCost;
     int counterYield;
+
+    void Start()
+    {
+        TierSelector.onTierSelected += EnableCard;
+
+        EnableCard(1);
+    }
 
     public void SetSymbols()
     {
@@ -86,8 +94,20 @@ public class Card : MonoBehaviour
 
             counterYield++;
         }
+    }
 
-        // remember to set alpha to one
+    public void EnableCard(int _tier)
+    {
+        if (_tier == tier)
+        {
+            button.enabled = true;
+            self.color = Color.white;
+        }
+        else
+        {
+            button.enabled = false;
+            self.color = Color.grey;
+        }
     }
 
     public void SelectCard()

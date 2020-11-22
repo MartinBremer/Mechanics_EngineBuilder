@@ -316,6 +316,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   self: {fileID: 7678969241702501247}
+  button: {fileID: -654225085277833587}
   blue: {fileID: 21300000, guid: 00dbd2391f6f04a4ca26e99ed935e6be, type: 3}
   red: {fileID: 21300000, guid: 81b975be3607b0141a790ff12568264e, type: 3}
   green: {fileID: 21300000, guid: ce4f718150bbe5444b4cdf1ac368d449, type: 3}

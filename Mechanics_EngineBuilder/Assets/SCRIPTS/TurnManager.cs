@@ -12,7 +12,10 @@ public class TurnManager : MonoBehaviour
     public static void NextTurn()
     {
         if (turn != Turns.P4)
+        {
             turn++;
+            onNewTurn();
+        }
         else
         {
             turn = Turns.P1;
