@@ -3,6 +3,8 @@ using UnityEngine.UI;
 
 public class Card : MonoBehaviour
 {
+    public Image self;
+
     public Sprite blue;
     public Sprite red;
     public Sprite green;
@@ -86,5 +88,20 @@ public class Card : MonoBehaviour
         }
 
         // remember to set alpha to one
+    }
+
+    public void SelectCard()
+    {
+        if (BoardManager.selectedCard != null)
+            BoardManager.selectedCard.ResetColor();
+
+        BoardManager.selectedCard = this;
+
+        self.color = Color.green;
+    }
+
+    public void ResetColor()
+    {
+        self.color = Color.white;
     }
 }
