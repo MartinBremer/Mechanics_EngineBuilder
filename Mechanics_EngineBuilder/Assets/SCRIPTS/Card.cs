@@ -85,14 +85,14 @@ public class Card : MonoBehaviour
         if (isCost)
         {
             costPos[counterCost].sprite = symbol;
-            costPos[counterCost].color = Color.white;
+            costPos[counterCost].color = new Color(1,1,1,1);
 
             counterCost++;
         }
         else
         {
             yieldPos[counterYield].sprite = symbol;
-            yieldPos[counterYield].color = Color.white;
+            yieldPos[counterYield].color = new Color(1, 1, 1, 1);
 
             counterYield++;
         }

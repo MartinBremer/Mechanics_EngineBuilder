@@ -12,5 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ed8924d3e94637842b7875a57865228e, type: 3}
   m_Name: Card28
   m_EditorClassIdentifier: 
-  cost: 0
-  yield: 0
+  costBlue: 2
+  costRed: 0
+  costGreen: 0
+  costPurple: 2
+  yieldBlue: 0
+  yieldRed: 2
+  yieldGreen: 0
+  yieldPurple: 0

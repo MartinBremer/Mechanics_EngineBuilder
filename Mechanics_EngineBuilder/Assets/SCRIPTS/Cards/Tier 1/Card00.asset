@@ -16,7 +16,7 @@ MonoBehaviour:
   costRed: 0
   costGreen: 0
   costPurple: 0
-  yieldBlue: 1
-  yieldRed: 0
-  yieldGreen: 1
+  yieldBlue: 0
+  yieldRed: 1
+  yieldGreen: 0
   yieldPurple: 0

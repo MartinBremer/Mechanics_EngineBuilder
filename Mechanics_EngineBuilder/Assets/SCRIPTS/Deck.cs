@@ -24,17 +24,15 @@ public class Deck : MonoBehaviour
 
     public void ResetDeck()
     {
-        // not sure this properly resets everything yet. But it works on start
         shuffledDeck = shuffler.ShuffleDeck(deckSize, this);
     }
 
     public GameObject CreateCard()
     {
         GameObject newCard = Instantiate(cardPrefab, transform.position, Quaternion.identity, transform);
-        newCard.name = "Card" + counter;
+        newCard.name = "Card_" + counter;
 
-        Card newCardStats = newCard.GetComponent<Card>();
-        TransferCardDataToCard(cardDataArray[counter], newCardStats);
+        TransferCardDataToCard(cardDataArray[counter], newCard.GetComponent<Card>());
 
         newCard.GetComponent<Card>().SetSymbols();
 
@@ -56,5 +54,7 @@ public class Deck : MonoBehaviour
         _newCard.yieldPurple = template.yieldPurple;
 
         _newCard.tier = tier;
+
+        Debug.Log($"{_newCard.name} / {cardDataArray[counter].name}: {_newCard.costBlue}, {_newCard.costRed}, {_newCard.costGreen}, {_newCard.costPurple}");
     }
 }
