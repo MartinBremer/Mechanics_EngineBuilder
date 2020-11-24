@@ -36,9 +36,9 @@ public class Dealer : MonoBehaviour
 
         foreach (bool spotTaken in SelectDeckBool(activeDeck.tier))
         {
-            if (!spotTaken && activeDeck.shuffledDeck.Count > counter)
+            if (!spotTaken && activeDeck.shuffledDeck.Count > 0)
             {
-                activeDeck.shuffledDeck[counter].transform.position = SelectDeckPosition(activeDeck.tier)[counter].position;
+                activeDeck.shuffledDeck[0].transform.position = SelectDeckPosition(activeDeck.tier)[counter].position;
                 SelectDeckBool(activeDeck.tier)[counter] = true;
 
                 if (activeDeck.tier == 1)
@@ -48,12 +48,12 @@ public class Dealer : MonoBehaviour
                 else if (activeDeck.tier == 3)
                     counterDeck3--;
 
-                activeDeck.shuffledDeck[counter].GetComponent<Card>().boardPosition = SelectDeckPosition(activeDeck.tier)[counter];
+                activeDeck.shuffledDeck[0].GetComponent<Card>().boardPosition = SelectDeckPosition(activeDeck.tier)[counter];
 
                 if (countersInitialized)
                     UpdateDeckCounters(activeDeck.tier);
                 
-                activeDeck.shuffledDeck.Remove(activeDeck.shuffledDeck[counter]);
+                activeDeck.shuffledDeck.Remove(activeDeck.shuffledDeck[0]);
             }
             
             counter++;
