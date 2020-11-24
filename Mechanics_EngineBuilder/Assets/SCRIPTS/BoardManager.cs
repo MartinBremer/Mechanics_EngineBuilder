@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
 public class BoardManager : MonoBehaviour
@@ -62,7 +63,7 @@ public class BoardManager : MonoBehaviour
         if (TurnManager.activePlayer.bTotals + 
             TurnManager.activePlayer.rTotals + 
             TurnManager.activePlayer.gTotals + 
-            TurnManager.activePlayer.pTotals >= 2000)
+            TurnManager.activePlayer.pTotals >= 1000)
         {
             if (selectedCard != null)
                 selectedCard.ResetColor();
@@ -72,6 +73,10 @@ public class BoardManager : MonoBehaviour
             winCondition.Select();
 
             win = true;
+        }
+        else
+        {
+            EventSystem.current.SetSelectedGameObject(null);
         }
     }
 }

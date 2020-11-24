@@ -207,12 +207,24 @@ public class Player : MonoBehaviour
 
         while (_costs.x >= 10)
         {
+            if (bTalisman.x == 0)
+            {
+                bCharm.x--;
+                bTalisman.x += 10;
+            }
+
             bTalisman.x--;
             _costs.x -= 10;
         }
 
         while (_costs.x >= 1)
         {
+            if (bOrb.x == 0)
+            {
+                bTalisman.x--;
+                bOrb.x += 10;
+            }
+
             bOrb.x--;
             _costs.x--;
         }
@@ -226,12 +238,24 @@ public class Player : MonoBehaviour
 
         while (_costs.y >= 10)
         {
+            if (rTalisman.x == 0)
+            {
+                rCharm.x--;
+                rTalisman.x += 10;
+            }
+
             rTalisman.x--;
             _costs.y -= 10;
         }
 
         while (_costs.y >= 1)
         {
+            if (rOrb.x == 0)
+            {
+                rTalisman.x--;
+                rOrb.x += 10;
+            }
+
             rOrb.x--;
             _costs.y--;
         }
@@ -245,12 +269,24 @@ public class Player : MonoBehaviour
 
         while (_costs.z >= 10)
         {
+            if (gTalisman.x == 0)
+            {
+                gCharm.x--;
+                gTalisman.x += 10;
+            }
+
             gTalisman.x--;
             _costs.z -= 10;
         }
 
         while (_costs.z >= 1)
         {
+            if (gOrb.x == 0)
+            {
+                gTalisman.x--;
+                gOrb.x += 10;
+            }
+
             gOrb.x--;
             _costs.z--;
         }
@@ -264,12 +300,24 @@ public class Player : MonoBehaviour
 
         while (_costs.w >= 10)
         {
+            if (pTalisman.x == 0)
+            {
+                pCharm.x--;
+                pTalisman.x += 10;
+            }
+
             pTalisman.x--;
             _costs.w -= 10;
         }
 
         while (_costs.w >= 1)
         {
+            if (pOrb.x == 0)
+            {
+                pTalisman.x--;
+                pOrb.x += 10;
+            }
+
             pOrb.x--;
             _costs.w--;
         }
