@@ -36,7 +36,7 @@ public class Dealer : MonoBehaviour
 
         foreach (bool spotTaken in SelectDeckBool(activeDeck.tier))
         {
-            if (!spotTaken && activeDeck.shuffledDeck.Count > 0)
+            if (!spotTaken && activeDeck.shuffledDeck.Count > counter)
             {
                 activeDeck.shuffledDeck[counter].transform.position = SelectDeckPosition(activeDeck.tier)[counter].position;
                 SelectDeckBool(activeDeck.tier)[counter] = true;
