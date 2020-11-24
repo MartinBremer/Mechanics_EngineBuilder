@@ -29,7 +29,7 @@ public class BoardManager : MonoBehaviour
         {
             win = false;
 
-            Debug.Log(TurnManager.activePlayer + " has a win condition!");
+            TurnManager.activePlayer.winConditionGraphic.SetActive(true);
 
             TurnManager.NextTurn();
         }

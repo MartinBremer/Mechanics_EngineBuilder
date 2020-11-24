@@ -41,6 +41,8 @@ public class Player : MonoBehaviour
     public int gTotals;
     public int pTotals;
 
+    public GameObject winConditionGraphic;
+
     void Start()
     {
         handTierOne = new Vector2[] { bOrb, rOrb, gOrb, pOrb};
