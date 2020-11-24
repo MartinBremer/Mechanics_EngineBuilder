@@ -34,6 +34,7 @@ public class Card : MonoBehaviour
     void Start()
     {
         TierSelector.onTierSelected += EnableCard;
+        TurnManager.onNewTurn += CheckTierActive;
 
         EnableCard(1);
     }
@@ -96,6 +97,11 @@ public class Card : MonoBehaviour
 
             counterYield++;
         }
+    }
+
+    void CheckTierActive()
+    {
+        EnableCard(TurnManager.activePlayer.activeTier);
     }
 
     public void EnableCard(int _tier)
