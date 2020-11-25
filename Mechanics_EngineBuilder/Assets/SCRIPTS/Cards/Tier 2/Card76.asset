@@ -10,13 +10,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ed8924d3e94637842b7875a57865228e, type: 3}
-  m_Name: Card105
+  m_Name: Card76
   m_EditorClassIdentifier: 
   costBlue: 0
-  costRed: 2
-  costGreen: 0
-  costPurple: 2
-  yieldBlue: 0
+  costRed: 1
+  costGreen: 1
+  costPurple: 1
+  yieldBlue: 2
   yieldRed: 0
-  yieldGreen: 2
+  yieldGreen: 0
   yieldPurple: 0
