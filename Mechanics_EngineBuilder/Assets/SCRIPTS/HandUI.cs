@@ -63,10 +63,10 @@ public class HandUI : MonoBehaviour
             gCharm.text = player.gCharm.x.ToString();
             pCharm.text = player.pCharm.x.ToString();
 
-            bTotals.text = (player.bOrb.x + player.bTalisman.x * 10 + player.bCharm.x * 100).ToString();
-            rTotals.text = (player.rOrb.x + player.rTalisman.x * 10 + player.rCharm.x * 100).ToString();
-            gTotals.text = (player.gOrb.x + player.gTalisman.x * 10 + player.gCharm.x * 100).ToString();
-            pTotals.text = (player.pOrb.x + player.pTalisman.x * 10 + player.pCharm.x * 100).ToString();
+            bTotals.text = (player.bOrb.x + player.bTalisman.x * 5 + player.bCharm.x * 25).ToString();
+            rTotals.text = (player.rOrb.x + player.rTalisman.x * 5 + player.rCharm.x * 25).ToString();
+            gTotals.text = (player.gOrb.x + player.gTalisman.x * 5 + player.gCharm.x * 25).ToString();
+            pTotals.text = (player.pOrb.x + player.pTalisman.x * 5 + player.pCharm.x * 25).ToString();
         }
         else
         {

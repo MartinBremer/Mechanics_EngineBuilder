@@ -63,7 +63,7 @@ public class BoardManager : MonoBehaviour
         if (TurnManager.activePlayer.bTotals + 
             TurnManager.activePlayer.rTotals + 
             TurnManager.activePlayer.gTotals + 
-            TurnManager.activePlayer.pTotals >= 1000)
+            TurnManager.activePlayer.pTotals >= 100)
         {
             if (selectedCard != null)
                 selectedCard.ResetColor();

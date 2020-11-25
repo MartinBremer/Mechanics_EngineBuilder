@@ -131,58 +131,58 @@ public class Player : MonoBehaviour
 
     void CalculateTotals()
     {
-        while (bOrb.x >= 10)
+        while (bOrb.x >= 5)
         {
-            bOrb.x -= 10;
+            bOrb.x -= 5;
             bTalisman.x++;
         }
 
-        while (bTalisman.x >= 10)
+        while (bTalisman.x >= 5)
         {
-            bTalisman.x -= 10;
+            bTalisman.x -= 5;
             bCharm.x++;
         }
 
-        while (rOrb.x >= 10)
+        while (rOrb.x >= 5)
         {
-            rOrb.x -= 10;
+            rOrb.x -= 5;
             rTalisman.x++;
         }
 
-        while (rTalisman.x >= 10)
+        while (rTalisman.x >= 5)
         {
-            rTalisman.x -= 10;
+            rTalisman.x -= 5;
             rCharm.x++;
         }
 
-        while (gOrb.x >= 10)
+        while (gOrb.x >= 5)
         {
-            gOrb.x -= 10;
+            gOrb.x -= 5;
             gTalisman.x++;
         }
 
-        while (gTalisman.x >= 10)
+        while (gTalisman.x >= 5)
         {
-            gTalisman.x -= 10;
+            gTalisman.x -= 5;
             gCharm.x++;
         }
 
-        while (pOrb.x >= 10)
+        while (pOrb.x >= 5)
         {
-            pOrb.x -= 10;
+            pOrb.x -= 5;
             pTalisman.x++;
         }
 
-        while (pTalisman.x >= 10)
+        while (pTalisman.x >= 5)
         {
-            pTalisman.x -= 10;
+            pTalisman.x -= 5;
             pCharm.x++;
         }
 
-        bTotals = Mathf.RoundToInt(bOrb.x + bTalisman.x * 10 + bCharm.x * 100);
-        rTotals = Mathf.RoundToInt(rOrb.x + rTalisman.x * 10 + rCharm.x * 100);
-        gTotals = Mathf.RoundToInt(gOrb.x + gTalisman.x * 10 + gCharm.x * 100);
-        pTotals = Mathf.RoundToInt(pOrb.x + pTalisman.x * 10 + pCharm.x * 100);
+        bTotals = Mathf.RoundToInt(bOrb.x + bTalisman.x * 5 + bCharm.x * 25);
+        rTotals = Mathf.RoundToInt(rOrb.x + rTalisman.x * 5 + rCharm.x * 25);
+        gTotals = Mathf.RoundToInt(gOrb.x + gTalisman.x * 5 + gCharm.x * 25);
+        pTotals = Mathf.RoundToInt(pOrb.x + pTalisman.x * 5 + pCharm.x * 25);
     }
 
     public void MakePurchase(Vector4 costs, Vector4 yields)
@@ -201,22 +201,22 @@ public class Player : MonoBehaviour
         Vector4 _costs = costs;
 
         // x = blue
-        while (_costs.x >= 100)
+        while (_costs.x >= 25)
         {
             bCharm.x--;
-            _costs.x -= 100;
+            _costs.x -= 25;
         }
 
-        while (_costs.x >= 10)
+        while (_costs.x >= 5)
         {
             if (bTalisman.x == 0)
             {
                 bCharm.x--;
-                bTalisman.x += 10;
+                bTalisman.x += 5;
             }
 
             bTalisman.x--;
-            _costs.x -= 10;
+            _costs.x -= 5;
         }
 
         while (_costs.x >= 1)
@@ -224,7 +224,7 @@ public class Player : MonoBehaviour
             if (bOrb.x == 0)
             {
                 bTalisman.x--;
-                bOrb.x += 10;
+                bOrb.x += 5;
             }
 
             bOrb.x--;
@@ -232,22 +232,22 @@ public class Player : MonoBehaviour
         }
 
         // y = red
-        while (_costs.y >= 100)
+        while (_costs.y >= 25)
         {
             rCharm.x--;
             _costs.y -= 100;
         }
 
-        while (_costs.y >= 10)
+        while (_costs.y >= 5)
         {
             if (rTalisman.x == 0)
             {
                 rCharm.x--;
-                rTalisman.x += 10;
+                rTalisman.x += 5;
             }
 
             rTalisman.x--;
-            _costs.y -= 10;
+            _costs.y -= 5;
         }
 
         while (_costs.y >= 1)
@@ -255,7 +255,7 @@ public class Player : MonoBehaviour
             if (rOrb.x == 0)
             {
                 rTalisman.x--;
-                rOrb.x += 10;
+                rOrb.x += 5;
             }
 
             rOrb.x--;
@@ -263,22 +263,22 @@ public class Player : MonoBehaviour
         }
 
         // z = green
-        while (_costs.z >= 100)
+        while (_costs.z >= 25)
         {
             gCharm.x--;
             _costs.z -= 100;
         }
 
-        while (_costs.z >= 10)
+        while (_costs.z >= 5)
         {
             if (gTalisman.x == 0)
             {
                 gCharm.x--;
-                gTalisman.x += 10;
+                gTalisman.x += 5;
             }
 
             gTalisman.x--;
-            _costs.z -= 10;
+            _costs.z -= 5;
         }
 
         while (_costs.z >= 1)
@@ -286,7 +286,7 @@ public class Player : MonoBehaviour
             if (gOrb.x == 0)
             {
                 gTalisman.x--;
-                gOrb.x += 10;
+                gOrb.x += 5;
             }
 
             gOrb.x--;
@@ -294,22 +294,22 @@ public class Player : MonoBehaviour
         }
 
         // w = purple
-        while (_costs.w >= 100)
+        while (_costs.w >= 25)
         {
             pCharm.x--;
             _costs.w -= 100;
         }
 
-        while (_costs.w >= 10)
+        while (_costs.w >= 5)
         {
             if (pTalisman.x == 0)
             {
                 pCharm.x--;
-                pTalisman.x += 10;
+                pTalisman.x += 5;
             }
 
             pTalisman.x--;
-            _costs.w -= 10;
+            _costs.w -= 5;
         }
 
         while (_costs.w >= 1)
@@ -317,7 +317,7 @@ public class Player : MonoBehaviour
             if (pOrb.x == 0)
             {
                 pTalisman.x--;
-                pOrb.x += 10;
+                pOrb.x += 5;
             }
 
             pOrb.x--;
@@ -330,16 +330,16 @@ public class Player : MonoBehaviour
         Vector4 _yields = yields;
 
         // x = blue
-        while (_yields.x >= 100)
+        while (_yields.x >= 25)
         {
             bCharm.y++;
-            _yields.x -= 100;
+            _yields.x -= 25;
         }
 
-        while (_yields.x >= 10)
+        while (_yields.x >= 5)
         {
             bTalisman.y++;
-            _yields.x -= 10;
+            _yields.x -= 5;
         }
 
         while (_yields.x >= 1)
@@ -349,16 +349,16 @@ public class Player : MonoBehaviour
         }
 
         // y = red
-        while (_yields.y >= 100)
+        while (_yields.y >= 25)
         {
             rCharm.y++;
-            _yields.y -= 100;
+            _yields.y -= 25;
         }
 
-        while (_yields.y >= 10)
+        while (_yields.y >= 5)
         {
             rTalisman.y++;
-            _yields.y -= 10;
+            _yields.y -= 5;
         }
 
         while (_yields.y >= 1)
@@ -368,16 +368,16 @@ public class Player : MonoBehaviour
         }
 
         // z = green
-        while (_yields.z >= 100)
+        while (_yields.z >= 25)
         {
             gCharm.y++;
-            _yields.z -= 100;
+            _yields.z -= 25;
         }
 
-        while (_yields.z >= 10)
+        while (_yields.z >= 5)
         {
             gTalisman.y++;
-            _yields.z -= 10;
+            _yields.z -= 5;
         }
 
         while (_yields.z >= 1)
@@ -387,16 +387,16 @@ public class Player : MonoBehaviour
         }
 
         // w = purple
-        while (_yields.w >= 100)
+        while (_yields.w >= 25)
         {
             pCharm.y++;
-            _yields.w -= 100;
+            _yields.w -= 25;
         }
 
-        while (_yields.w >= 10)
+        while (_yields.w >= 5)
         {
             pTalisman.y++;
-            _yields.w -= 10;
+            _yields.w -= 5;
         }
 
         while (_yields.w >= 1)

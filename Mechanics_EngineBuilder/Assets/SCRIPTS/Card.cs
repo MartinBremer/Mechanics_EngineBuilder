@@ -138,7 +138,7 @@ public class Card : MonoBehaviour
 
     bool CheckResources()
     {
-        int multiplier = tier == 3 ? 100 : tier == 2 ? 10 : 1;
+        int multiplier = tier == 3 ? 25 : tier == 2 ? 5 : 1;
         Player active = TurnManager.activePlayer;
 
         if (active.bTotals >= costBlue * multiplier &&
@@ -155,7 +155,7 @@ public class Card : MonoBehaviour
 
     void SetCostsAndYields()
     {
-        int multiplier = tier == 3 ? 100 : tier == 2 ? 10 : 1;
+        int multiplier = tier == 3 ? 25 : tier == 2 ? 5 : 1;
 
         BoardManager.costs = new Vector4(costBlue, costRed, costGreen, costPurple) * multiplier;
         BoardManager.yields = new Vector4(yieldBlue, yieldRed, yieldGreen, yieldPurple) * multiplier;
